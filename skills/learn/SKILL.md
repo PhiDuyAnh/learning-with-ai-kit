@@ -78,7 +78,36 @@ updated: <YYYY-MM-DD>
 
 Update it whenever you learn something about the user's knowledge, and at the end of each session. Keep it short. It is a map, not a log.
 
-## 4. Route
+## 4. Mark this folder as a learning folder
+
+A new session only loads a skill when the request sounds like learning, so later questions here could get a normal answer. Agents read the folder's instruction file at the start of every session, so a short note there fixes this.
+
+Do this when the user typed the slash command (`/learn` or `/learning-with-ai-kit:learn`), and no instruction file in the current folder already contains `<!-- learning-with-ai-kit -->`. Skip it in the user's home folder.
+
+Add this block to the end of the file:
+
+```markdown
+<!-- learning-with-ai-kit -->
+## Learning
+This folder is for learning. For any question or explanation here, use the
+learning-with-ai-kit skills: follow plain-explain, read the learning profile at
+~/.learning-with-ai-kit/profile.md, and use learn for anything new to study.
+```
+
+Which file:
+
+| Folder has | Add the block to |
+|---|---|
+| `CLAUDE.md` that imports `@AGENTS.md` | `AGENTS.md` |
+| `AGENTS.md` and `CLAUDE.md` (no import) | Both |
+| Only `AGENTS.md` | `AGENTS.md`. If you are Claude Code, also create `CLAUDE.md` containing `@AGENTS.md`, since Claude Code reads `CLAUDE.md`. |
+| Only `CLAUDE.md` | `CLAUDE.md` |
+| Only `GEMINI.md` | `GEMINI.md` |
+| None | The file your agent reads: `CLAUDE.md` for Claude Code, `GEMINI.md` for Gemini CLI, otherwise `AGENTS.md` |
+
+Append only. Never change or reorder what's already in the file. Then tell the user in one line which file you changed and that deleting the block undoes it.
+
+## 5. Route
 
 Load the matching skill and follow it. The user can switch modes any time ("just quiz me", "slow down", "give me resources instead"). Switch without fuss.
 
