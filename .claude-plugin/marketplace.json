@@ -1,0 +1,15 @@
+{
+  "name": "learning-with-ai-kit",
+  "owner": {
+    "name": "PhiDuyAnh",
+    "url": "https://github.com/PhiDuyAnh"
+  },
+  "description": "Learn anything and everything with AI.",
+  "plugins": [
+    {
+      "name": "learning-with-ai-kit",
+      "source": "./",
+      "description": "Learn anything and everything with AI. Plain-language teaching that adapts to you, grounded research, free knowledge checks, Obsidian notes, and YouTube learning."
+    }
+  ]
+}

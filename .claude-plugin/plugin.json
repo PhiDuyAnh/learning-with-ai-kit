@@ -1,0 +1,21 @@
+{
+  "name": "learning-with-ai-kit",
+  "version": "0.1.0",
+  "description": "Learn anything and everything with AI. Plain-language teaching that adapts to you, grounded research, free knowledge checks, Obsidian notes, and YouTube learning.",
+  "author": {
+    "name": "PhiDuyAnh",
+    "url": "https://github.com/PhiDuyAnh"
+  },
+  "repository": "https://github.com/PhiDuyAnh/learning-with-ai-kit",
+  "license": "MIT",
+  "keywords": [
+    "learning",
+    "teaching",
+    "tutor",
+    "research",
+    "obsidian",
+    "notes",
+    "youtube",
+    "transcription"
+  ]
+}
